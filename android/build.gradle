@@ -2,13 +2,14 @@ group 'altercode.xyz.unique_identifier'
 version '1.0'
 
 buildscript {
+    ext.kotlin_version = '2.0.20'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.6.1'
     }
 }
 
@@ -22,14 +23,14 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
-
+    namespace 'altercode.xyz.uniqueidentifier'
+    compileSdkVersion 34
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 28
     }
 }
